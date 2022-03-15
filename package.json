@@ -1,0 +1,15 @@
+{
+  "name": "randomweather",
+  "version": "1.0.0",
+  "description": "actividad3 progra avanzada",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Marco Perez",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "electron": "^17.1.2"
+  }
+}
