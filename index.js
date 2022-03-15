@@ -34,23 +34,21 @@ formHoy.addEventListener('submit', (event)=>{
 
 formFecha.addEventListener('submit', (event)=>{
     event.preventDefault()
-
     let fechaSelec = fechaSeleccionada.value
-    
     setTimeout(predecirClimaFecha, tiempo, fechaSelec)
 })
 
 
 function predecirClimaHoy(dateTime){
     contenido1.innerHTML = 'Solicitud enviada: ' + dateTime
-    predHoy.innerHTML = 'El clima de hoy es: ' + arr[Math.floor(Math.random() * arr.length)]
+    predHoy.innerHTML = 'El clima de hoy es: ' + arr[Math.floor(Math.random() * arr.length)] + ', temperatura: ' + Math.floor(Math.random() * 25 + 5) + "C"
     retraso1.innerHTML = 'Este mensaje se retraso por: ' + (tiempo/1000) + ' segundos.'
 }
 
 function predecirClimaFecha(fechaSelec){
     contenido2.innerHTML = 'Solicitud enviada: ' + fechaSelec
-    predManana.innerHTML = 'El clima de la manana de hoy es: ' + arr[Math.floor(Math.random() * arr.length)]
-    predTarde.innerHTML = 'El clima de la tarde de hoy es: ' + arr[Math.floor(Math.random() * arr.length)]
-    predNoche.innerHTML = 'El clima de la noche de hoy es: ' + arr[Math.floor(Math.random() * arr.length)]
+    predManana.innerHTML = 'El clima de la manana de hoy es: ' + arr[Math.floor(Math.random() * arr.length)] + ', temperatura: ' + Math.floor(Math.random() * 25 + 5) + "C"
+    predTarde.innerHTML = 'El clima de la tarde de hoy es: ' + arr[Math.floor(Math.random() * arr.length)] + ', temperatura: ' + Math.floor(Math.random() * 25 + 5) + "C"
+    predNoche.innerHTML = 'El clima de la noche de hoy es: ' + arr[Math.floor(Math.random() * arr.length)] + ', temperatura: ' + Math.floor(Math.random() * 25 + 5) + "C"
     retraso2.innerHTML = 'Este mensaje se retraso por: ' + (tiempo/1000) + ' segundos.'
 }
